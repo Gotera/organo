@@ -1,14 +1,10 @@
-.text-field {
-    margin: 20px 0;
-}
-
-.text-field label {
+.float-list label{
     display: block;
     margin-bottom: 8px;
     font-size: 24px;
 }
 
-.text-field input {
+.float-list select {
     box-sizing: border-box;
     background-color: #fff;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.0);
@@ -16,4 +12,4 @@
     border: none;
     font-size: 24px;
     padding: 24px;
-}
+} 
