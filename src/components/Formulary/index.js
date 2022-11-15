@@ -4,7 +4,7 @@ import FloatList from "../FloatList";
 import Button from "../Button";
 import { useState } from "react";
 
-const Form = () => {
+const Form = (props) => {
 
     const times = [
         'Programação',
@@ -23,7 +23,12 @@ const Form = () => {
 
     const onSend = (event) => {
         event.preventDefault();
-        console.log('Formulário Enviado => ', name, role, image, time)
+        props.onNewColaboretorRegister({
+            name,
+            role,
+            image,
+            time
+        })
     }
 
     return (
