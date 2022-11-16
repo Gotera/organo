@@ -4,6 +4,45 @@ import Form from './components/Formulary';
 import Time from './components/Time';
 
 function App() {
+
+  const times = [
+    {
+      name: 'Programação',
+      colorPrimary: '#57C278',
+      colorSecundary: 'D9F7E9'
+    },
+    {
+      name: 'Front-End',
+      colorPrimary: '#82CFFA',
+      colorSecundary: '#E8F8FF'
+    },
+    {
+      name: 'Data Science',
+      colorPrimary: '#A6D157',
+      colorSecundary: ''
+    },
+    {
+      name: 'Devops',
+      colorPrimary: '#E06B69',
+      colorSecundary: '#FDE7E8'
+    },
+    {
+      name: 'Ux e Design',
+      colorPrimary: '#DB6EBF',
+      colorSecundary: '#FAE9F5'
+    },
+    {
+      name: 'Mobile',
+      colorPrimary: '#FFBA05',
+      colorSecundary: '#FFF5D9'
+    },
+    {
+      name: 'Inovação e Gestão',
+      colorPrimary: '#FF8A29',
+      colorSecundary: '#FFEEDF'
+    },
+  ]
+
   const [colaboretors, setColaboretors] = useState('') 
 
   const onNewColaboretorAdd = (colaboretor) => {
@@ -15,7 +54,7 @@ function App() {
     <div className="App">
       <Banner />
       <Form onNewColaboretorRegister={colaboretor => onNewColaboretorAdd(colaboretor)}/>
-      <Time />
+      { times.map(time => <Time name={ time.name } key={ time.name } colorPrimary={ time.colorPrimary } colorSecundary={ time.colorSecundary }/>) }
     </div>
   );
 }
