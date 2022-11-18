@@ -53,7 +53,7 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Form onNewColaboretorRegister={colaboretor => onNewColaboretorAdd(colaboretor)}/>
+      <Form times={ times.map(time => time.name) } onNewColaboretorRegister={colaboretor => onNewColaboretorAdd(colaboretor)}/>
       { times.map(time => <Time name={ time.name } key={ time.name } colorPrimary={ time.colorPrimary } colorSecundary={ time.colorSecundary }/>) }
     </div>
   );

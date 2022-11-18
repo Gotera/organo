@@ -1,3 +1,4 @@
+import Colaboretor from '../Colaboretor';
 import './Time.css'
 
 const Time = (props) => {
@@ -5,6 +6,7 @@ const Time = (props) => {
 
         <section className='time' style={{ backgroundColor: props.colorSecundary }}>
             <h3 style={{ borderColor: props.colorPrimary }}>{ props.name }</h3>
+            <Colaboretor />
         </section>
     )
 }

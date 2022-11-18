@@ -6,16 +6,6 @@ import { useState } from "react";
 
 const Form = (props) => {
 
-    const times = [
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'Devops',
-        'Ux e Design',
-        'Mobile',
-        'Inovação e Gestão',
-    ]
-
     const [name, setName] = useState('')
     const [role, setRole] = useState('')
     const [image, setImage] = useState('')
@@ -55,8 +45,8 @@ const Form = (props) => {
                 />
                 <FloatList 
                     label="Time" 
-                    itens={ times }
-                    value={times}
+                    itens={ props.times }
+                    value={ time }
                     whenChange={value => setTime(value)}
                 />
                 <Button text="Ciar Card"/>
