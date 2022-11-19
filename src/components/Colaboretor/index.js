@@ -4,12 +4,12 @@ const Colaboretor = (props) => {
     return (
         <div className='colaborador'>
             <div className='cabecalho'> 
-                <img src="https://github.com/viniciusneves.png" alt="Vinicius Neves"/>
+                <img src={ props.image } alt={ props.name } />
             </div>
 
             <div className='rodape'>
-                <h4>Vinicius Neves</h4>
-                <h5>Instrutor</h5>
+                <h4>{ props.name }</h4>
+                <h5>{ props.role }</h5>
             </div>
         </div>
     )

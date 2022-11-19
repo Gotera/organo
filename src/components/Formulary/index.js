@@ -19,6 +19,10 @@ const Form = (props) => {
             image,
             time
         })
+        setName('')
+        setRole('')
+        setImage('')
+        setTime('')
     }
 
     return (

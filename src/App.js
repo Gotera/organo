@@ -9,7 +9,7 @@ function App() {
     {
       name: 'Programação',
       colorPrimary: '#57C278',
-      colorSecundary: 'D9F7E9'
+      colorSecundary: '#D9F7E9'
     },
     {
       name: 'Front-End',
@@ -19,7 +19,7 @@ function App() {
     {
       name: 'Data Science',
       colorPrimary: '#A6D157',
-      colorSecundary: ''
+      colorSecundary: '#F0F8E2'
     },
     {
       name: 'Devops',
@@ -43,7 +43,7 @@ function App() {
     },
   ]
 
-  const [colaboretors, setColaboretors] = useState('') 
+  const [colaboretors, setColaboretors] = useState([]) 
 
   const onNewColaboretorAdd = (colaboretor) => {
     console.log(colaboretor)
@@ -53,8 +53,18 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Form times={ times.map(time => time.name) } onNewColaboretorRegister={colaboretor => onNewColaboretorAdd(colaboretor)}/>
-      { times.map(time => <Time name={ time.name } key={ time.name } colorPrimary={ time.colorPrimary } colorSecundary={ time.colorSecundary }/>) }
+      <Form 
+        times={ times.map(time => time.name) } 
+        onNewColaboretorRegister={colaboretor => onNewColaboretorAdd(colaboretor)}
+      />
+
+      { times.map(time => <Time name={ time.name } 
+      key={ time.name } 
+      colorPrimary={ time.colorPrimary }
+      colorSecundary={ time.colorSecundary }
+      colaboretors={ colaboretors.filter(colaboretor => colaboretor.time === time.name) }
+      />) }
+      
     </div>
   );
 }
