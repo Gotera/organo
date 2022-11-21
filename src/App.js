@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Banner } from './components/Banner';
+import { Footer } from './components/Footer';
 import Form from './components/Formulary';
 import Time from './components/Time';
 
@@ -64,7 +65,7 @@ function App() {
       colorSecundary={ time.colorSecundary }
       colaboretors={ colaboretors.filter(colaboretor => colaboretor.time === time.name) }
       />) }
-      
+      <Footer />
     </div>
   );
 }
