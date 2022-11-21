@@ -53,7 +53,7 @@ const Form = (props) => {
                     value={ time }
                     whenChange={value => setTime(value)}
                 />
-                <Button text="Ciar Card"/>
+                <Button text="Criar Card"/>
             </form>
         </section>
     )}

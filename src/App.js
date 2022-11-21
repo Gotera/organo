@@ -47,7 +47,6 @@ function App() {
   const [colaboretors, setColaboretors] = useState([]) 
 
   const onNewColaboretorAdd = (colaboretor) => {
-    console.log(colaboretor)
     setColaboretors([...colaboretors, colaboretor])
   }
 

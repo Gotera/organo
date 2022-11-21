@@ -6,7 +6,7 @@ const Time = (props) => {
         ( props.colaboretors.length  ) ? <section className='time' style={{ backgroundColor: props.colorSecundary }}>
             <h3 style={{ borderColor: props.colorPrimary }}>{ props.name }</h3>
             <div className='colaboretors'>
-                { props.colaboretors.map( colaboretor => <Colaboretor name={ colaboretor.name } role={ colaboretor.role } image={ colaboretor.image } /> ) }
+                { props.colaboretors.map( colaboretor => <Colaboretor key={colaboretor.name} backgroundColorTime={ props.colorPrimary } name={ colaboretor.name } role={ colaboretor.role } image={ colaboretor.image } /> ) }
             </div>
         </section>
         : ''

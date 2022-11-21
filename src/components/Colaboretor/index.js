@@ -3,7 +3,7 @@ import "./Colaboretor.css"
 const Colaboretor = (props) => {
     return (
         <div className='colaborador'>
-            <div className='cabecalho'> 
+            <div className='cabecalho' style={{ backgroundColor: props.backgroundColorTime }}> 
                 <img src={ props.image } alt={ props.name } />
             </div>
 
